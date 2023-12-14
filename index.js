@@ -15,7 +15,7 @@ spinner.start({});
 
 let args = yargs(process.argv.slice(2)).argv;
 
-const { name, dir, custom, type } = args;
+const { name, dir, custom } = args;
 
 const convertedName = useNameConverter(name);
 
