@@ -2,12 +2,18 @@
 const yargs = require("yargs");
 const fs = require("fs");
 const useNameConverter = require("./helpers/useNameConverter.js");
-const {
-  componentContent,
-  componentStyleContent,
-} = require("./reference/react-native.js");
 const { useSeperatedDir } = require("./helpers/useSeperatedDir.js");
 const { createSpinner } = require("nanospinner");
+
+//Pasta references
+const {
+  reactNativeComponentContent,
+  reactNativeComponentStyleContent,
+} = require("./reference/react-native.js");
+const {
+  reactComponentContent,
+  reactComponentStyleContent,
+} = require("./reference/react.js");
 
 const spinner = createSpinner("Pasta is beign made...");
 
@@ -15,11 +21,30 @@ spinner.start({});
 
 let args = yargs(process.argv.slice(2)).argv;
 
-const { name, dir, custom } = args;
+const { name, dir, custom, type } = args;
 
 const convertedName = useNameConverter(name);
 
 let currentPath = "";
+
+const selectedPasta = (type) => {
+  if (type === "react-native") {
+    return {
+      componentContent: reactNativeComponentContent,
+      componentStyleContent: reactNativeComponentStyleContent,
+    };
+  } else if (type === "react") {
+    return {
+      componentContent: reactComponentContent,
+      componentStyleContent: reactComponentStyleContent,
+    };
+  } else {
+    return {
+      componentContent: reactNativeComponentContent,
+      componentStyleContent: reactNativeComponentStyleContent,
+    };
+  }
+};
 
 const createNewDirFolder = async () => {
   let dirList = useSeperatedDir(dir);
@@ -64,11 +89,11 @@ const createNewComponent = async () => {
         } else {
           createNewComponentFile(
             `${currentPath + "/" + convertedName}/${componentName}`,
-            componentContent(convertedName)
+            selectedPasta(type).componentContent(convertedName)
           );
           createNewComponentStyle(
             `${currentPath + "/" + convertedName}/${componentStyleName}`,
-            componentStyleContent
+            selectedPasta(type).componentStyleContent
           );
         }
       })
@@ -94,11 +119,11 @@ const createNewComponent = async () => {
         } else {
           createNewComponentFile(
             `${convertedName}/${componentName}`,
-            componentContent(convertedName)
+            reactNativeComponentContent(convertedName)
           );
           createNewComponentStyle(
             `${convertedName}/${componentStyleName}`,
-            componentStyleContent
+            reactNativeComponentStyleContent
           );
         }
       })
