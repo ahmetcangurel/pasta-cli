@@ -1,0 +1,17 @@
+{
+  "name": "pasta-cli",
+  "version": "1.0.0",
+  "description": "Create a new pasta with a single command.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Can Gürel",
+  "license": "ISC",
+  "dependencies": {
+    "nanospinner": "^1.1.0",
+    "yargs": "^17.7.2"
+  }
+}
