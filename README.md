@@ -26,7 +26,7 @@
 npx pasta-cli --name button
 ```
 
-### Props
+### 🎯 Props
 
 | Name       | Description                                                                                        |
 | :--------- | :------------------------------------------------------------------------------------------------- |
@@ -71,19 +71,13 @@ export const customComponentStyleContent = `
 `;
 ```
 
-### 🚚 Example usage
+### 💎 Example usage
 
 This command will create a component named "button" under "src/components" folders for "react-native".
 
 ```shell
 npx pasta-cli --name button --dir src/components --type react-native
 ```
-
-### Good First Issues
-
-We have a list of [good first issues][gfi] that contain bugs which have a relatively limited scope. This is a great place to get started, gain experience, and get familiar with our contribution process.
-
-[gfi]: https://github.com/facebook/react-native/labels/good%20first%20issue
 
 ## 📄 License
 
