@@ -26,12 +26,12 @@ npx pasta-cli --name button
 
 ### 🎯 Props
 
-| Name       | Description                                                                                        |
-| :--------- | :------------------------------------------------------------------------------------------------- |
-| `--name`   | Gets the component name (required)                                                                 |
-| `--type`   | It can take the values "react" or "react-native". (Default: 'react-native')                        |
-| `--dir`    | Specifies where to render the component. (Default: project root dir)                               |
-| `--custom` | To use a custom template (note: if this prop is used, there is no need to give the `--type` value) |
+| Name       | Type                   | Description                                                                                        |
+| :--------- | :--------------------- | :------------------------------------------------------------------------------------------------- |
+| `--name`   | string                 | Gets the component name (required)                                                                 |
+| `--type`   | `react`,`react-native` | It can take the values "react" or "react-native". (Default: 'react-native')                        |
+| `--dir`    | etc: `src/components`  | Specifies where to render the component. (Default: project root dir)                               |
+| `--custom` | `boolean`              | To use a custom template (note: if this prop is used, there is no need to give the `--type` value) |
 
 #### 🍎 If you want to use a custom template
 
@@ -71,10 +71,17 @@ export const customComponentStyleContent = `
 
 ### 💎 Example usage
 
-This command will create a component named "button" under "src/components" folders for "react-native".
-
 ```shell
 npx pasta-cli --name button --dir src/components --type react-native
+```
+
+```
+This command will create a component named "button" under "src/components" folders for "react-native".
+-src/
+  -components/
+    -Button/
+      -Button.tsx
+      -Button.Style.ts
 ```
 
 ## 📄 License
