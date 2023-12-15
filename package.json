@@ -1,15 +1,24 @@
 {
   "name": "pasta-cli",
-  "version": "1.0.0",
-  "description": "Create a new pasta with a single command.",
+  "version": "1.0.1",
+  "description": "Create your components and screens with single command",
   "main": "index.js",
+  "bin": {
+    "pasta": "./index.js"
+  },
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "pasta",
+    "create your components with a single line",
+    "create components",
+    "create react native components",
+    "create react components"
+  ],
   "author": "Can Gürel",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "nanospinner": "^1.1.0",
     "yargs": "^17.7.2"
