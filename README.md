@@ -71,12 +71,13 @@ export const customComponentStyleContent = `
 
 ### 💎 Example usage
 
+This command will create a component named "button" under "src/components" folders for "react-native".
+
 ```shell
 npx pasta-cli --name button --dir src/components --type react-native
 ```
 
 ```
-This command will create a component named "button" under "src/components" folders for "react-native".
 -src/
   -components/
     -Button/
