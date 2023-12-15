@@ -1,7 +1,5 @@
 <h1 align="center">
-  <a href="https://reactnative.dev/">
-    Pasta
-  </a>
+    Pasta-Cli
 </h1>
 <p align="center">
   <strong>Create your components and screens with single command</strong><br>
