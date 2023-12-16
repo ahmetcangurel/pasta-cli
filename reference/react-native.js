@@ -1,19 +1,19 @@
-const reactNativeComponentContent = (convertedName) => `
+const reactNativeComponentContent = (name) => `
 import React, { FC } from "react";
 import { View, Text } from "react-native";
-import styles from "./${convertedName}.Style";
+import styles from "./${name}.Style";
 
-type ${convertedName}Props = {};
+type ${name}Props = {};
 
-const ${convertedName}: FC<${convertedName}Props> = ({}) => {
+const ${name}: FC<${name}Props> = ({}) => {
     return (
         <View>
-            <Text>${convertedName}</Text>
+            <Text>${name}</Text>
         </View>
      );
     };
 
-export default ${convertedName};
+export default ${name};
 `;
 
 const reactNativeComponentStyleContent = `
@@ -24,7 +24,12 @@ const styles = StyleSheet.create({});
 export default styles;
 `;
 
+const reactNativeIndexContent = (name) => `
+export { default } from "./${name}";
+`;
+
 module.exports = {
   reactNativeComponentContent,
   reactNativeComponentStyleContent,
+  reactNativeIndexContent,
 };

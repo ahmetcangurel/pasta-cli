@@ -21,68 +21,31 @@
 ### 🚚 No installation required, npx available
 
 ```shell
-npx pasta-cli --name button
+npx pasta-cli --name my-component
 ```
 
 ### 🎯 Props
 
-| Name       | Type                   | Description                                                                                        |
-| :--------- | :--------------------- | :------------------------------------------------------------------------------------------------- |
-| `--name`   | string                 | Gets the component name (required)                                                                 |
-| `--type`   | `react`,`react-native` | It can take the values "react" or "react-native". (Default: 'react-native')                        |
-| `--dir`    | etc: `src/components`  | Specifies where to render the component. (Default: project root dir)                               |
-| `--custom` | `boolean`              | To use a custom template (note: if this prop is used, there is no need to give the `--type` value) |
-
-#### 🍎 If you want to use a custom template
-
-##### Create your pasta.js file in the root
-
-**_Note:_** _You just need to change the content_
-
-```shell
-//pasta.js
-
-export const customComponentContent = (name) => `
-    import React, { FC } from "react";
-    import { View, Text } from "react-native";
-    import styles from "./${name}.Style";
-
-    type ${name}Props = {};
-
-    const ${name}: FC<${name}Props> = ({}) => {
-    return (
-    <View>
-    <Text>${name} namel</Text>
-    </View>
-    );
-  };
-
-export default ${name};
-`;
-
-export const customComponentStyleContent = `
-    import { StyleSheet } from "react-native";
-
-    const styles = StyleSheet.create({});
-
-    export default styles;
-`;
-```
+| Name     | Type                   | Description                                                                 |
+| :------- | :--------------------- | :-------------------------------------------------------------------------- |
+| `--name` | string (rqeuired)      | If you separate the name with a `-` sign, you will get Pascal case output.  |
+| `--type` | `react`,`react-native` | It can take the values "react" or "react-native". (Default: 'react-native') |
+| `--dir`  | etc: `src/components`  | Specifies where to render the component. (Default: project root dir)        |
 
 ### 💎 Example usage
 
 This command will create a component named "button" under "src/components" folders for "react-native".
 
 ```shell
-npx pasta-cli --name button --dir src/components --type react-native
+npx pasta-cli --name my-component --dir src/components --type react-native
 ```
 
 ```
 -src/
   -components/
-    -Button/
-      -Button.tsx
-      -Button.Style.ts
+    -MyComponent/
+      -MyComponent.tsx
+      -MyComponent.Style.ts
 ```
 
 ## 📄 License

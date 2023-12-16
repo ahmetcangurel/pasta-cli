@@ -1,8 +1,10 @@
 const reactComponentContent = (name) => `
-import React from 'react';
+import React, { FC } from "react";
 import './${name}.css';
 
-const ${name} = () => {
+type ${name}Props = {};
+
+const ${name}: FC<${name}Props> = ({}) =>  {
     return (
         <div>
             <p>${name}</p>
