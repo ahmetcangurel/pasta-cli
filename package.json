@@ -1,6 +1,6 @@
 {
   "name": "pasta-cli",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Create your components and screens with single command",
   "main": "index.js",
   "bin": {
@@ -19,6 +19,10 @@
   ],
   "author": "Can Gürel",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmetcangurel/pasta-cli"
+  },
   "dependencies": {
     "nanospinner": "^1.1.0",
     "yargs": "^17.7.2"
