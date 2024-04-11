@@ -1,6 +1,7 @@
 const reactNativeComponentContent = (name) => `
 import React, { FC } from "react";
 import { View, Text } from "react-native";
+import {useTranslation} from 'react-i18next';
 
 // Styles
 import styles from "./${name}.Style";
