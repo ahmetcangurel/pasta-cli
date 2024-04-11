@@ -1,7 +1,7 @@
 {
   "name": "pasta-cli",
-  "version": "1.1.1",
-  "description": "Create your components and screens with single command",
+  "version": "1.1.2",
+  "description": "Create your 'React Native' components and screens with single command",
   "main": "index.js",
   "bin": {
     "pasta": "./index.js"
