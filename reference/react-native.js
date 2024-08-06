@@ -1,5 +1,5 @@
 const reactNativeComponentContent = (name) => `
-import React, { FC } from "react";
+import React from "react";
 import { View, Text } from "react-native";
 import {useTranslation} from 'react-i18next';
 
@@ -7,9 +7,9 @@ import {useTranslation} from 'react-i18next';
 import styles from "./${name}.Style";
 import {useTheme} from '../../../theme/ThemeProvider';
 
-type ${name}Props = {};
+// Components
 
-const ${name}: FC<${name}Props> = ({}) => {
+const ${name} = ({}) => {
     const {colors} = useTheme();
     const Style = styles();
     const {t} = useTranslation();
@@ -27,6 +27,7 @@ export default ${name};
 const reactNativeComponentStyleContent = `
 import {StyleSheet} from 'react-native';
 import {useTheme} from '../../../theme/ThemeProvider';
+import {horizontalScale, verticalScale, moderateScale} from '../../../theme/metrics';
 
 const styles = () => {
   const {colors} = useTheme();
