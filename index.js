@@ -76,15 +76,15 @@ const createReactNativeComponent = async () => {
   await createNewFolder(dir ? currentPath + convertedName : convertedName)
     .then(() => {
       createNewFile(
-        `${currentPath}${convertedName}/${convertedName}.js`,
+        `${currentPath}${convertedName}/${convertedName}.tsx`,
         reactNativeComponentContent(convertedName)
       );
       createNewFile(
-        `${currentPath}${convertedName}/${convertedName}.Style.js`,
+        `${currentPath}${convertedName}/${convertedName}.Style.ts`,
         reactNativeComponentStyleContent
       );
       createNewFile(
-        `${currentPath}${convertedName}/index.js`,
+        `${currentPath}${convertedName}/index.ts`,
         reactNativeIndexContent(convertedName)
       );
     })

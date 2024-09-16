@@ -1,5 +1,5 @@
 const reactNativeComponentContent = (name) => `
-import React from "react";
+import React, { FC } from "react";
 import { View, Text } from "react-native";
 import {useTranslation} from 'react-i18next';
 
@@ -8,6 +8,8 @@ import styles from "./${name}.Style";
 import {useTheme} from '../../../theme/ThemeProvider';
 
 // Components
+
+type ${name}Props = {};
 
 const ${name} = ({}) => {
     const {colors} = useTheme();
